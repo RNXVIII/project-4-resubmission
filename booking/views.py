@@ -7,3 +7,9 @@ class BookingList(generic.ListView):
     queryset = Booking.objects.all()
     template_name = "booking/index.html"
     context_object_name = "bookings"  # using {% for booking in bookings %} instead of {% for booking in object_list %}.
+
+
+class Bookings(generic.ListView):
+    model = Booking
+    template_name = 'booking_list.html'  
+    context_object_name = 'bookings' 
