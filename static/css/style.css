@@ -47,7 +47,7 @@ p {
 .navbar .nav-link.active,
 .navbar .nav-link:hover,
 .navbar .nav-link:focus { 
-    color: #4CAF50; 
+    color: #4CAF50 !important; 
 }
 
 .navbar-nav {
@@ -65,7 +65,7 @@ p {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
-    color: #388E3C;  
+    color: #388E3C !important;  
 }
 
 

@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+    <!-- Display messages -->
+    {% if messages %}
+        <div class="alert alert-info">
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+
 <div class="d-flex align-items-center justify-content-center min-vh-100">
     <div class="form-container">
         <h2 class="text-center">Make a Booking</h2>
