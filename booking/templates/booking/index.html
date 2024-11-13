@@ -1,49 +1,43 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="container my-5">
-        <h1 class="text-center mb-4">Booking List</h1>
-
-        <div class="text-center my-4">
-            <a href="{% url 'booking_list' %}" class="btn btn-success btn-lg">
-                Check Today's Bookings
-            </a>
-        </div>
-
-
-
-
-        {% if bookings %}
-            <table class="table table-striped table-hover">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>ID</th>
-                        <th>Date</th>
-                        <th>Table Number</th>
-                        <th>User</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for booking in bookings %}
-                        <tr>
-                            <td>{{ booking.id }}</td>
-                            <td>{{ booking.date }}</td>
-                            <td>{{ booking.table_number }}</td>
-                            <td>{{ booking.user.username }}</td>
-                            <td>
-                                {% if booking.booked %}
-                                    <span class="badge bg-success">Booked</span>
-                                {% else %}
-                                    <span class="badge bg-warning">Available</span>
-                                {% endif %}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+<div class="d-flex align-items-center justify-content-center min-vh-100">
+    <div class="form-container">
+        <h2 class="text-center">Make a Booking</h2>
+        {% if user.is_authenticated %}
+            {% if messages %}
+                <div class="info-message">
+                    <ul>
+                        {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-field mb-3">
+                    <label for="id_date">Date:</label>
+                    <input type="date" id="id_date" name="date" required class="form-control">
+                </div>
+                <div class="form-field mb-3">
+                    <label for="id_table_number">Table Number:</label>
+                    <input type="text" id="id_table_number" name="table_number" placeholder="Enter table number" required class="form-control">
+                </div>
+                <div class="form-field mb-3">
+                    <label for="id_user">User (if applicable):</label>
+                    <input type="text" id="id_user" name="user" placeholder="Enter username if booking for someone else" class="form-control">
+                </div>
+                <button type="submit" class="button-primary btn w-100">Book</button>
+                <div class="text-center mt-3">
+                    <a href="{% url 'booking_list' %}" class="button-primary">Check Today's Bookings</a>
+                </div>
+            </form>
         {% else %}
-            <p class="text-center">No bookings available.</p>
+            <div class="warning-message text-center">
+                You need to <a href="{% url 'account_login' %}" class="text-success">login</a> to make a booking.
+            </div>
         {% endif %}
     </div>
+</div>
 {% endblock %}
