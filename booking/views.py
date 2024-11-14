@@ -23,10 +23,10 @@ def index(request):
             else:
                 booking = form.save(commit=False)
                 booking.user = user
-                booking.booked = True  # Ensure the booking is marked as booked
+                booking.booked = True  
                 booking.save()
                 messages.success(request, 'Booking successfully created.')
-                return redirect('home')  # Redirect to the home page or any other page
+                return redirect('home')  
         else:
             messages.error(request, 'There was an error with your booking.')
     else:
