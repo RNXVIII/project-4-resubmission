@@ -5,30 +5,19 @@ html, body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     color: #333; 
-    background-color: #fafafa; 
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 0.5em;
-}
-
-p {
-    line-height: 1.6;
-    color: #555;
+    display: flex;
+    flex-direction: column; /* Ensures that the page uses Flexbox */
 }
 
 /* Main Background */
 .main-bg {
-    min-height: calc(100vh - 100px); 
+    flex-grow: 1;  
     padding: 2em 0;
 }
 
 /* Navbar */
 .navbar {
-    margin-top: 0;
+    margin-top: 0 !important;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
@@ -62,13 +51,10 @@ p {
     list-style: none;
 }
 
-
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
     color: #388E3C !important;  
 }
-
-
 
 /* Main Content */
 .container {
@@ -79,13 +65,13 @@ p {
 
 /* Form Container */
 .form-container {
-    max-width: 500px; 
+    max-width: 500px;
     width: 100%;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); 
-    background-color: #fff;
-    margin-bottom: 5em; 
+    background-color: rgba(255, 255, 255);
+    margin-bottom: 5em;
 }
 
 /* Text Alignment */
@@ -134,12 +120,13 @@ p {
 /* Footer */
 .footer {
     background-color: #4CAF50;
-    color: #fff;
+    color: white;
     padding: 20px;
     text-align: center;
+    width: 100%;
+    margin-top: auto;  /* Push the footer to the bottom */
     position: relative;
     bottom: 0;
-    width: 100%;
 }
 
 .footer p {
