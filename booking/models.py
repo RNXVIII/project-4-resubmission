@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 class Booking(models.Model):
     id = models.AutoField(primary_key=True)
     date = models.DateField()
-    table_number = models.IntegerField(default=1)  # learned from CI
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    table_number = models.IntegerField(default=1)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)  # learned from w3schools and geeks
     booked = models.BooleanField(default=False)
 
     class Meta:
@@ -15,4 +15,3 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"{self.date} - Table {self.table_number} - {'Booked' if self.booked else 'Available'} by {self.user.username if self.booked else 'N/A'}"
-

@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',  # google login, learned from w3schools
     'booking',
-    'mystuff',
 ]
 
 MIDDLEWARE = [
