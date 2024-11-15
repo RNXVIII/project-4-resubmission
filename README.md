@@ -30,6 +30,10 @@ annoyingly there was some things i couldnt get done in time / didnt understand
 
 import allauth templates , include base.html and add css styling
 
+<h2><img src="static/images/allautherror.png"></h2>
+
+its says it doesnt exist even after reinstalling it
+
 # Languages used 
 
 [Python](https://www.python.org/)
