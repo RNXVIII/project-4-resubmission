@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center">profile</h1>
+    <p class="text-center">This is a test page to confirm that the profile template is loading correctly.</p>
+    
+    <div class="text-center mt-4">
+        <a href="{% url 'home' %}" class="btn btn-primary">Go Back to Home</a>
+
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}">
+                    Logout
+                </a>
+            </li>
+        </ul>
+
+
+{% endblock content %}
