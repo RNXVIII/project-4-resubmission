@@ -101,10 +101,10 @@ DATABASES = {
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.codeanyapp.com",
     "https://project-4-3d1642dc1afd.herokuapp.com/",
     "https://miserable-skull-v66v5v77q55qcp469-8000.app.github.dev",
     "https://localhost:8000"
+    "https://*.herokuapp.com",
 ]
 
 

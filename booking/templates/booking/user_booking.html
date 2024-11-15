@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-  <!-- Container for the content -->
+
   <div class="container mt-4">
     <h2 class="mb-4">My Bookings</h2>
 
@@ -38,7 +38,7 @@
   </div>
 
   <div class="text-center mt-3">
-    <!-- Logout button styled similarly to the "Check Today's Bookings" button -->
+
     <form method="post" action="{% url 'account_logout' %}" class="d-inline">
       {% csrf_token %}
       <button type="submit" class="button-primary">
