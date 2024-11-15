@@ -30,7 +30,7 @@ SECRET_KEY = "django-insecure-c6=i9r5z%kx=4&!e^w2^d&7-=lcd9=@ad1vzg*x3)#0l1u*0c+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['project-4-3d1642dc1afd.herokuapp.com/','localhost']
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
@@ -102,7 +102,7 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
-    "https://*.herokuapp.com",
+    "https://project-4-3d1642dc1afd.herokuapp.com/",
     "https://miserable-skull-v66v5v77q55qcp469-8000.app.github.dev",
     "https://localhost:8000"
 ]
@@ -147,6 +147,9 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

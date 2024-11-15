@@ -48,6 +48,13 @@ however there is an ERD for the bookings model which is here:
 
 <h2><img src="static/images/basic_modelerd.png"></h2>
 
+# agile tools (user stories)
+
+as i was planning this had a notepad and a checklist to go through what ive done and using these to convert into user stories which helped me alot figure out what was done, needs to be done, or has been done.
+
+[myuserstory](https://github.com/RNXVIII/project-4-blog)
+
+
 # deployment
 
 the tool used to deploy this project is heroku.
