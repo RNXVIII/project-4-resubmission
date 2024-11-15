@@ -135,4 +135,10 @@ it was exasperating but im still learning/relearning  an awful lot from this pro
 
 thank you for viewing this project.
 
+## another thing 
+
+some commits may be big due to either importing templates from old projects or dealing with an issue
+
+when making the second app 'mystuff' for the profile stuff it went horribly and i moved all of my work into one commit once it all worked for more a less a clean commit rather than alot of smaller commits that could confuse the user, other the 2 big commits everything should be fine , appologies!
+
 
